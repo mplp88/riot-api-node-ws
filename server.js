@@ -14,5 +14,5 @@ var Request = require('./request')
 app.use('/Api', Request);
 
 app.listen(port, function () {
-    console.log("Server is running on port: " + port);
+    console.log("Server is running on : http://localhost:" + port + "/Api");
 });

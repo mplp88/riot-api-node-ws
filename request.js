@@ -10,6 +10,10 @@ const apiKey = 'YOU API KEY HERE';
 
 router.use(cors());
 
+router.get('/', function(req, res){
+    res.send('<h1>Api is working</h1>');
+});
+
 // Endpoints Start
 // Champion Rotation
 router.get('/Champions/FreeChampionRotation/:region', function (req, res) {

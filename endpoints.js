@@ -1,6 +1,6 @@
 module.exports = {
     champion: {
-        freeChampionRotation: '/lol/platform/v3/champion-rotation/'
+        freeChampionRotation: '/lol/platform/v3/champion-rotations'
     },
     championMastery: {
         allChampionMasteriesSummonerId: '/lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}',

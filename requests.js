@@ -6,7 +6,7 @@ const request = require('request');
 const cors = require('cors');
 
 const host = '.api.riotgames.com';
-const apiKey = 'YOU API KEY HERE';
+const apiKey = 'RGAPI-257ea43d-e350-4e43-b178-520e603d446b';
 
 router.use(cors());
 
@@ -17,15 +17,24 @@ router.get('/', function(req, res){
 // Endpoints Start
 // Champion Rotation
 router.get('/Champions/FreeChampionRotation/:region', function (req, res) {
-    var region = req.params.region;
-
-    var uri = getUri(region, endpoints.champion.freeChampionRotation);
-    var headers = setHeaders();
-
-    request({
-        headers: headers,
-        uri: uri
-    }).pipe(res);
+    try {
+        var region = req.params.region;
+        
+        var uri = getUri(region, endpoints.champion.freeChampionRotation);
+        var headers = setHeaders();
+        console.log(uri);
+        console.log(headers);
+        
+        request({
+            headers: headers,
+            uri: uri
+        }).pipe(res);
+    } catch(e) {
+        res.status(500).json({
+            message: 'Error trying to get Free Champion Rotation',
+            error: e
+        })
+    }
 });
 
 // Champion Mastery
@@ -157,7 +166,7 @@ router.get('/ShardData/GetStatusByRegion/:region', function (req, res) {
 
     var uri = getUri(region, endpoints.lolStatus.shardData);
     var headers = setHeaders();
-
+    console.log(uri);
     request({
         headers: headers,
         uri: uri

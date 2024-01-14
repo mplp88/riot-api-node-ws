@@ -1,16 +1,32 @@
 {
-    "name": "riot-api-node",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "body-parser": "^1.17.2",
-        "cors": "^2.8.4",
-        "express": "^4.16.3",
-        "prop-types": "^15.6.2",
-        "request": "^2.88.0"
-    },
-    "keywords": [
-        "nodejs",
-        "express"
-    ]
+  "name": "riot-api-node",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.16.3",
+    "prop-types": "^15.6.2",
+    "request": "^2.88.0"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "NodeJS WebService for consuming Riot Games Api",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mplp88/riot-api-node-ws.git"
+  },
+  "author": "Martín Ponce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mplp88/riot-api-node-ws/issues"
+  },
+  "homepage": "https://github.com/mplp88/riot-api-node-ws#readme"
 }
